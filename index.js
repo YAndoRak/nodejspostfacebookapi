@@ -6,9 +6,6 @@ const youtubedl = require('youtube-dl');
 const app = express();
 
 const url = 'http://';
-
-app.set('port', (8000));
-
 app.use(bodyParser.urlencoded({
     extended:false
 }));
