@@ -117,7 +117,8 @@ function sendmess(link, userId){
 
 }
 //graph.facebook.com/109923754135421?fields=access_token,conversations{senders,id}
-app.listen(app.get('port'), function(){
+app.listen(3000)
+/*app.listen(app.get('port'), function(){
   console.log('running port', app.get('port'));
 });
-
+*/
