@@ -24,6 +24,7 @@ app.get('/:ytbId/:tagId', function (req, res) {
 // ytb id WKsjaOqDXgg
 function getytbinfo(ytbId, userId){
   var url = 'http://www.youtube.com/watch?v='+ytbId;
+  return url;
  
   youtubedl.getInfo(url, function (err, info){
     launchDown(userId, info.url);
