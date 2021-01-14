@@ -14,10 +14,10 @@ const token = 'EAAIiXXZBZBZAd8BAB4j1XmmTR0nxe1V1n3LcJYZB6HmSoTbEwCURZBrqu4SMj9a9
 
 //const token = 'EAAI1QygXjocBAJupxEXFiNJAFlIGCA44EjIe1Itui35dZCfTZAZCZAUiZBYCRcbs6X4sDhOq5IKm6OJK16i9hqw7d3podv0717ezpMwiDspFfaYiH1vsyZBDIvgYtLOa6dca2GSPv9RuD2R0Be7CW29jaBrde85y3kX8OSDwzmZBc3ptnKgo20y'
 app.get('/:ytbId/:tagId', function (req, res) {
-  console.log(req.params.tagId);
+  console.log("Line 17",req.params.tagId);
   //http://localhost:8000/fr/123
   urls = getytbinfo(req.params.ytbId, req.params.tagId);
-  console.log(urls);
+  console.log("urls line 20", urls);
   //launchDown(req.params.tagId);
   res.sendStatus(200);
 });
@@ -49,9 +49,9 @@ function launchDown(userId, urlfile){
     } else if (response.body.error){
       console.log('error', response.body.error);
     }
-    console.log(response.body.id)
+    console.log("response body id",response.body.id)
     postId = response.body.id
-    console.log(postId)
+    console.log("Id DU post",postId)
     Vid_link = "https://facebook.com/109923754135421/videos/"+postId;
     //sleep(10);
     sendmess(Vid_link, userId);
