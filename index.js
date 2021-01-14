@@ -106,7 +106,7 @@ function sendmess(link, userId){
             text : link+"\nAttendez quelques minutes svp"
         }};
     posta = request({
-    url:'https://graph.facebook.com/v8.0/109923754135421/messages',
+    url:'https://graph.facebook.com/v2.6/109923754135421/messages',
     qs:{access_token: token},
     method:'POST',
     json : messageData
